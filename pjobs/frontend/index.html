@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PJobs - Cadastro de Serviços</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0;
+    }
+
+    input {
+      padding: 8px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #lista-servicos {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #lista-servicos li {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+    }
+
+    #lista-servicos button {
+      background-color: #f44336;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    #lista-servicos button:hover {
+      background-color: #e53935;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>PJobs - Cadastro de Serviços</h1>
+
+  <!-- Formulário para adicionar serviço -->
+  <form id="form-servico">
+    <label for="titulo">Título</label>
+    <input type="text" id="titulo" name="titulo" required>
+
+    <label for="descricao">Descrição</label>
+    <input type="text" id="descricao" name="descricao" required>
+
+    <label for="prestador">Prestador</label>
+    <input type="text" id="prestador" name="prestador" required>
+
+    <label for="cliente">Cliente</label>
+    <input type="text" id="cliente" name="cliente" required>
+
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <hr>
+
+<h2>Buscar Serviço por ID</h2>
+<input type="number" id="buscar-id" placeholder="Digite o ID do serviço">
+<button onclick="buscarServicoPorId()">Buscar</button>
+<div id="servico-buscado"></div>
+
+  <h2>Serviços Cadastrados</h2>
+  <!-- Lista de serviços -->
+  <ul id="lista-servicos"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
