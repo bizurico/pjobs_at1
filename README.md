@@ -13,6 +13,8 @@ Abra o terminal na raiz do projeto e execute:
 
 pip install flask flask-cors
 
+## 📍 Utilizando o sistema
+
 execute o app.py
 
 abra o index.html
